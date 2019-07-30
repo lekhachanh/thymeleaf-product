@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
+
 <body>
+<h3>Information Product</h3>
+<p>
+    <a th:href="@{/product/list}">
+        Back to product list
+    </a>
+</p>
+<div id="detail">
+    <div class="cusdetail">
+        <label>Name:</label>
+        <label th:text="${product.getName()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Price:</label>
+        <label th:text="${product.getPrice()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Information:</label>
+        <label th:text="${product.getDescription()}"></label>
+    </div>
+</div>
 
 </body>
 </html>
